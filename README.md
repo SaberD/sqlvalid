@@ -6,16 +6,6 @@ SQL file validator for Go projects. Validates all `.sql` files recursively.
 - PostgreSQL (full SQL parsing with pganalyze)
 - SQLite (actual SQLite parser)
 
-## Features
-
-- ✓ PostgreSQL SQL parsing (full validation with pganalyze)
-- ✓ SQLite SQL validation (actual SQLite parser)
-- ✓ Recursive directory scanning
-- ✓ Clear error reporting with file paths
-- ✓ Exit code for CI/CD integration (0 = success, 1 = errors)
-- ✓ Works with modular project structures
-- ✓ Fast validation
-
 ## Installation
 
 ```bash
@@ -147,10 +137,10 @@ pgvalid enables a workflow that's **ideal for AI code generation and modificatio
 ### Raw SQL Files
 
 AI agents work better with:
-- ✓ Explicit SQL files (not hidden in ORMs)
-- ✓ Clear file organization (one query per file)
-- ✓ Readable, modifiable SQL
-- ✓ No generated boilerplate code
+- Explicit SQL files (not hidden in ORMs)
+- Clear file organization (one query per file)
+- Readable, modifiable SQL
+- No generated boilerplate code
 
 ### Example AI Workflow
 
@@ -171,19 +161,11 @@ Without pgvalid:
 
 ### Why ORMs Don't Work Well with AI
 
-- ✗ Type generation is implicit
-- ✗ Schema coupling is complex
-- ✗ Hard to predict generated code
-- ✗ Changes cascade unexpectedly
-- ✗ AI needs domain knowledge of tool
-
-### Why Raw SQL Works Well with AI
-
-- ✓ SQL is standard and predictable
-- ✓ Files are editable and readable
-- ✓ Changes are explicit and traceable
-- ✓ Validation is independent
-- ✓ AI can reason about it directly
+- Type generation is implicit
+- Schema coupling is complex
+- Hard to predict generated code
+- Changes cascade unexpectedly
+- AI needs domain knowledge of tool
 
 ### Use Case: AI-Assisted Database Optimization
 
@@ -319,11 +301,11 @@ Now when you `make build`:
 ### Why This Approach?
 
 **Pragmatic and Frugal:**
-- ✓ PostgreSQL: Use proven pganalyze parser (PostgreSQL's own parser)
-- ✓ SQLite: Use actual SQLite parser (you're already using CGO if you use SQLite in Go)
-- ✓ No complex regex or manual validation
-- ✓ Validates what actually matters: SQL syntax correctness
-- ✓ Simple, maintainable code
+- PostgreSQL: Use proven pganalyze parser (PostgreSQL's own parser)
+- SQLite: Use actual SQLite parser (you're already using CGO if you use SQLite in Go)
+- No complex regex or manual validation
+- Validates what actually matters: SQL syntax correctness
+- Simple, maintainable code
 
 ## Development
 
