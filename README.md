@@ -6,27 +6,49 @@ Supports PostgreSQL and SQLite.
 
 ## Installation
 
-Download from [GitHub Releases](https://github.com/saberd/sqvalid/releases):
+### Option 1: Go Install (Recommended)
+
+```bash
+go install github.com/saberd/sqvalid@latest
+```
+
+Make sure `~/go/bin` is in your PATH. Add this to `~/.bashrc`, `~/.zshrc`, or `~/.profile`:
+
+```bash
+export PATH="$PATH:$(go env GOPATH)/bin"
+```
+
+Then reload your shell:
+
+```bash
+source ~/.bashrc  # or ~/.zshrc
+```
+
+Now you can run:
+
+```bash
+sqvalid ./sql
+```
+
+### Option 2: Binary Download
+
+Download pre-built binaries from [GitHub Releases](https://github.com/saberd/sqvalid/releases):
 
 ```bash
 # Linux
-wget https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-linux-amd64 -O sqvalid
+curl -L https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-linux-amd64 -o sqvalid
 chmod +x sqvalid
+./sqvalid ./sql
 
 # macOS (Apple Silicon)
-wget https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-darwin-arm64 -O sqvalid
+curl -L https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-darwin-arm64 -o sqvalid
 chmod +x sqvalid
+./sqvalid ./sql
 
 # macOS (Intel)
-wget https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-darwin-amd64 -O sqvalid
+curl -L https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-darwin-amd64 -o sqvalid
 chmod +x sqvalid
-```
-
-Or build from source (requires Go + C compiler):
-
-```bash
-CGO_ENABLED=1 go install github.com/saberd/sqvalid@latest
-sqvalid ./sql
+./sqvalid ./sql
 ```
 
 ## Usage
@@ -59,7 +81,7 @@ Exit code 0 = all valid, 1 = errors found.
 ```yaml
 - name: Validate SQL
   run: |
-    wget https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-linux-amd64 -O sqvalid
+    curl -L https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-linux-amd64 -o sqvalid
     chmod +x sqvalid
     ./sqvalid ./sql
 ```
