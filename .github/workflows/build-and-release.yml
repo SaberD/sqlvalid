@@ -25,11 +25,11 @@ jobs:
             cc: arm-linux-gnueabihf-gcc
           - os: darwin
             arch: amd64
-            runner: macos-13
+            runner: macos-15
             cc: clang
           - os: darwin
             arch: arm64
-            runner: macos-14
+            runner: macos-latest
             cc: clang
           - os: windows
             arch: amd64
