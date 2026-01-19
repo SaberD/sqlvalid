@@ -24,7 +24,7 @@ func main() {
 
 	args := flag.Args()
 	if len(args) < 1 {
-		fmt.Printf("Usage: sqlvalid [-sqlite] <directory>\n")
+		fmt.Printf("Usage: sqvalid [-sqlite] <directory>\n")
 		os.Exit(1)
 	}
 

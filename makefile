@@ -17,7 +17,7 @@ golang:
 
 .PHONY: build
 build:
-	CGO_ENABLED=1 go build -o sqlvalid .
+	CGO_ENABLED=1 go build -o sqvalid .
 
 .PHONY: test
 test:
@@ -25,7 +25,7 @@ test:
 
 .PHONY: clean
 clean:
-	rm -f sqlvalid
+	rm -f sqvalid
 
 .PHONY: vet
 vet:

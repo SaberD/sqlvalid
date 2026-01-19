@@ -1,4 +1,4 @@
-module github.com/saberd/sqlvalid
+module github.com/saberd/sqvalid
 
 go 1.23
 

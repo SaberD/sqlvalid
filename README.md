@@ -1,4 +1,4 @@
-# sqlvalid
+# sqvalid
 
 SQL file validator. Validates all `.sql` files recursively.
 
@@ -6,37 +6,37 @@ Supports PostgreSQL and SQLite.
 
 ## Installation
 
-Download from [GitHub Releases](https://github.com/saberd/sqlvalid/releases):
+Download from [GitHub Releases](https://github.com/saberd/sqvalid/releases):
 
 ```bash
 # Linux
-wget https://github.com/saberd/sqlvalid/releases/latest/download/sqlvalid-linux-amd64 -O sqlvalid
-chmod +x sqlvalid
+wget https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-linux-amd64 -O sqvalid
+chmod +x sqvalid
 
 # macOS (Apple Silicon)
-wget https://github.com/saberd/sqlvalid/releases/latest/download/sqlvalid-darwin-arm64 -O sqlvalid
-chmod +x sqlvalid
+wget https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-darwin-arm64 -O sqvalid
+chmod +x sqvalid
 
 # macOS (Intel)
-wget https://github.com/saberd/sqlvalid/releases/latest/download/sqlvalid-darwin-amd64 -O sqlvalid
-chmod +x sqlvalid
+wget https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-darwin-amd64 -O sqvalid
+chmod +x sqvalid
 ```
 
 Or build from source (requires Go + C compiler):
 
 ```bash
-CGO_ENABLED=1 go install github.com/saberd/sqlvalid@latest
-sqlvalid ./sql
+CGO_ENABLED=1 go install github.com/saberd/sqvalid@latest
+sqvalid ./sql
 ```
 
 ## Usage
 
 ```bash
 # PostgreSQL (default)
-sqlvalid ./sql
+sqvalid ./sql
 
 # SQLite
-sqlvalid -sqlite ./sql
+sqvalid -sqlite ./sql
 ```
 
 ## Output
@@ -59,9 +59,9 @@ Exit code 0 = all valid, 1 = errors found.
 ```yaml
 - name: Validate SQL
   run: |
-    wget https://github.com/saberd/sqlvalid/releases/latest/download/sqlvalid-linux-amd64 -O sqlvalid
-    chmod +x sqlvalid
-    ./sqlvalid ./sql
+    wget https://github.com/saberd/sqvalid/releases/latest/download/sqvalid-linux-amd64 -O sqvalid
+    chmod +x sqvalid
+    ./sqvalid ./sql
 ```
 
 ## License
