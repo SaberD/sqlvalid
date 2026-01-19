@@ -21,7 +21,7 @@ build:
 
 .PHONY: test
 test:
-	CGO_ENABLED=1 go test -v ./...
+	CGO_ENABLED=1 go test -v -race -timeout 10s ./...
 
 .PHONY: clean
 clean:
